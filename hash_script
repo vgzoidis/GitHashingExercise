@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#input: last four digits of 10654 
+input_value="0652"
+
+#hashing algorithm used: SHA-256
+hashed_value=$(echo -n "$input_value" | sha256sum | awk '{print $1}')
+
+#output: saved to hash_output.txt
+echo "$hashed_value" > hash_output.txt
